@@ -1,41 +1,19 @@
-# Rails
-*.rbc
-*.sassc
-.sass-cache
-capybara-*.html
-.rspec
-.rvmrc
-/.bundle
-/vendor/bundle
-/log/*
-/tmp/*
-/db/*.sqlite3
-/public/system/*
-/coverage/
-/spec/tmp/*
-**.orig
-rerun.txt
-pickle-email-*.html
-.project
+# Node.js
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
 
-# Ruby
-*.gem
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
+pids
+logs
+results
 
-# YARD artifacts
-.yardoc
-_yardoc
-doc/
+npm-debug.log
+node_modules
+dist
 
 # SublimeText project files
 *.sublime-workspace
