@@ -1,13 +1,13 @@
 {
-  "name": "starttter-grunt",
+  "name": "starttter",
   "version": "0.0.1",
-  "description": "Starter website",
+  "description": "Starttter",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "",
-  "author": "Tu Tak Tran (contact@tutaktran.com)",
+  "author": "Tak Tran (contact@tutaktran.com)",
   "license": "BSD",
   "devDependencies": {
     "grunt": "~0.4.0",
