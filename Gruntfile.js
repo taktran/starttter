@@ -30,23 +30,9 @@ module.exports = function (grunt) {
       }
     },
     jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {}
-      },
+      jshintrc: '.jshintrc',
       gruntfile: {
-        src: 'Gruntfile.js'
+        src: ['Gruntfile.js']
       },
       appFiles: {
         src: ['app/js/*.js', 'test/**/*.js']
