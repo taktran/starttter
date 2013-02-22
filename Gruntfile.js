@@ -2,6 +2,14 @@
 module.exports = function (grunt) {
   'use strict';
 
+  // For livereload
+  var path = require('path');
+  var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+
+  var folderMount = function folderMount(connect, point) {
+    return connect.static(path.resolve(point));
+  };
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
@@ -11,11 +19,13 @@ module.exports = function (grunt) {
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
 
     connect: {
-      server: {
+      livereload: {
         options: {
           port: 7770,
           base: 'app',
-          keepalive: true
+          middleware: function(connect, options) {
+            return [lrSnippet, folderMount(connect, '.')]
+          }
         }
       }
     },
@@ -48,14 +58,14 @@ module.exports = function (grunt) {
         src: ['app/js/*.js', 'test/**/*.js']
       }
     },
-    watch: {
+    regarde: {
       gruntfile: {
         files: ['<%= jshint.gruntfile.src %>'],
         tasks: ['jshint:gruntfile']
       },
       appFiles: {
         files: '<%= jshint.appFiles.src %>',
-        tasks: ['jshint:appFiles']
+        tasks: ['jshint:appFiles', 'livereload']
       }
     }
   });
@@ -63,11 +73,13 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.loadNpmTasks('grunt-regarde');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-livereload');
+
   grunt.loadNpmTasks('grunt-simple-mocha');
 
-  grunt.registerTask('default', 'watch');
-  grunt.registerTask('server', ['connect']);
+  grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
 
 };
