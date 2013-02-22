@@ -13,6 +13,10 @@ To watch files for [js linting](http://www.jshint.com/):
 
     grunt
 
+To start the server:
+
+    grunt connect
+
 ## Author
 
 Created by [Tak Tran (ttt)](http://tutaktran.com).
