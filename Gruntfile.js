@@ -54,7 +54,7 @@ module.exports = function (grunt) {
       gruntfile: {
         src: ['Gruntfile.js']
       },
-      appFiles: {
+      js: {
         src: ['app/js/*.js', 'test/**/*.js']
       }
     },
@@ -63,9 +63,9 @@ module.exports = function (grunt) {
       //   files: ['<%= jshint.gruntfile.src %>'],
       //   tasks: ['jshint']
       // },
-      appFiles: {
-        files: '<%= jshint.appFiles.src %>',
-        tasks: ['jshint:appFiles', 'livereload']
+      js: {
+        files: '<%= jshint.js.src %>',
+        tasks: ['jshint', 'livereload']
       }
     }
   });
