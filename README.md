@@ -6,7 +6,7 @@ Based on [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (from [H5BP i
 
 ## Installation
 
-1. Install [node](http://nodejs.org/) and [git](http://git-scm.com/)
+1. Install [git](http://git-scm.com/), [node](http://nodejs.org/) and [sass](http://sass-lang.com/download.html)
 2. Clone the project: `git@github.com:taktran/starttter.git`
 3. Go into the directory and run: `npm install`
 4. Install [gruntjs](http://gruntjs.com/)
