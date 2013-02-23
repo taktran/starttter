@@ -12,7 +12,7 @@
   "latedef": true,
   "sub": true,
   "boss": true,
-  "eqnull", true,
+  "eqnull": true,
   "newcap": true,
   "noarg": true,
   "quotmark": "single",
