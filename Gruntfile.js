@@ -1,4 +1,4 @@
-/*global module:false*/
+/*global require:true, module:false*/
 module.exports = function (grunt) {
   'use strict';
 
@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 
   var folderMount = function folderMount(connect, point) {
-    return connect.static(path.resolve(point));
+    return connect['static'](path.resolve(point));
   };
 
   grunt.initConfig({
