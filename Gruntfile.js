@@ -30,6 +30,13 @@ module.exports = function (grunt) {
       }
     },
 
+    sass: {
+      dist: {
+        files: {
+          'app/css/main.css': 'app/sass/main.scss'
+        }
+      }
+    },
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -67,6 +74,10 @@ module.exports = function (grunt) {
         files: 'app/index.html',
         tasks: ['livereload']
       },
+      css: {
+        files: 'app/sass/*.scss',
+        tasks: ['sass', 'livereload']
+      },
       js: {
         files: '<%= jshint.js.src %>',
         tasks: ['jshint', 'livereload']
@@ -77,6 +88,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.loadNpmTasks('grunt-regarde');
   grunt.loadNpmTasks('grunt-contrib-connect');
