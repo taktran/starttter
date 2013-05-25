@@ -78,9 +78,15 @@ module.exports = function (grunt) {
           livereload: true
         }
       }
+    },
+
+    open: {
+      all: {
+        path: 'http://localhost:' + port
+      }
     }
   });
 
-  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.registerTask('default', ['open', 'connect', 'watch']);
 
 };
