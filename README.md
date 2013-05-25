@@ -1,21 +1,28 @@
 # Starttter
 
-A website boilerplate.
+A website boilerplate, with the following features
 
-Based on [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (from [H5BP initializer](http://www.initializr.com/))
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (from [H5BP initializer](http://www.initializr.com/))
+* [GruntJS](http://gruntjs.com/) - with [Sass](http://sass-lang.com/download.html), [Livereload](https://github.com/gruntjs/grunt-contrib-livereload), and [Jshint](http://www.jshint.com/about/) support
 
-## Installation
+## Prerequisites
 
-1. Install [git](http://git-scm.com/), [node](http://nodejs.org/) and [sass](http://sass-lang.com/download.html)
-2. Clone the project: `git@github.com:taktran/starttter.git`
-3. Go into the directory and run: `npm install`
-4. Install [gruntjs](http://gruntjs.com/)
+1. Install
+    * [Node](http://nodejs.org/)
+    * [Sass](http://sass-lang.com/download.html)
+    * [GruntJS](http://gruntjs.com/)
 
-To start the server (with [jshint](http://www.jshint.com/) and [livereload](https://github.com/gruntjs/grunt-contrib-livereload)):
+2. Install packages
 
-    grunt
+        npm install
 
-(`--force` is to make sure jshint doesn't stop the server if there is an error)
+## Development
+
+1. Start the server
+
+        grunt
+
+2. View the site at: [http://localhost:7770](http://localhost:7770)
 
 ## Author
 
