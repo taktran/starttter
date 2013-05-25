@@ -6,12 +6,15 @@ module.exports = function (grunt) {
     appBase = "app";
 
   // For livereload
-  var path = require('path');
-  var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+  function addLivereloadMiddleware(connect, options) {
+    var path = require('path'),
+      lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
+      folderMount = function folderMount(connect, point) {
+        return connect['static'](path.resolve(point));
+      };
 
-  var folderMount = function folderMount(connect, point) {
-    return connect['static'](path.resolve(point));
-  };
+    return [lrSnippet, folderMount(connect, options.base)];
+  }
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -26,9 +29,7 @@ module.exports = function (grunt) {
         options: {
           port: port,
           base: appBase,
-          middleware: function (connect, options) {
-            return [lrSnippet, folderMount(connect, options.base)];
-          }
+          middleware: addLivereloadMiddleware
         }
       }
     },
