@@ -18,11 +18,13 @@ A website boilerplate, with the following features
 
 ## Development
 
-1. Start the server
+Start the server
 
-        grunt
+    grunt
 
-2. View the site at: [http://localhost:7770](http://localhost:7770)
+View the site at: [http://localhost:7770](http://localhost:7770)
+
+To run it on another the `port` flag eg, `grunt --port=3000`
 
 ## Author
 

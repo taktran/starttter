@@ -2,6 +2,8 @@
 module.exports = function (grunt) {
   'use strict';
 
+  var port = grunt.option('port') || 7770;
+
   // For livereload
   var path = require('path');
   var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
@@ -21,7 +23,7 @@ module.exports = function (grunt) {
     connect: {
       livereload: {
         options: {
-          port: 7770,
+          port: port,
           base: 'app',
           middleware: function (connect, options) {
             return [lrSnippet, folderMount(connect, options.base)];
