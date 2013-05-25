@@ -46,22 +46,26 @@ module.exports = function (grunt) {
         src: ['app/js/*.js', 'test/**/*.js']
       }
     },
-    regarde: {
-      // gruntfile: {
-      //   files: ['<%= jshint.gruntfile.src %>'],
-      //   tasks: ['jshint']
-      // },
-      html: {
-        files: 'app/index.html',
-        tasks: ['livereload']
+
+    watch: {
+      jshintrc: {
+        files: '.jshintrc',
+        tasks: ['jshint:jshintrc']
+      },
+      gruntfile: {
+        files: 'Gruntfile.js',
+        tasks: ['jshint:gruntfile']
+      },
+      scripts: {
+        files: 'app/js/*.js',
+        tasks: ['jshint']
       },
       css: {
         files: 'app/sass/*.scss',
-        tasks: ['sass', 'livereload']
-      },
-      js: {
-        files: '<%= jshint.js.src %>',
-        tasks: ['jshint', 'livereload']
+        tasks: ['sass'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
@@ -69,12 +73,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.loadNpmTasks('grunt-regarde');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-livereload');
 
   grunt.loadNpmTasks('grunt-simple-mocha');
 
-  grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
+  grunt.registerTask('default', ['watch']);
 
 };
