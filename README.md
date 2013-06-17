@@ -26,7 +26,7 @@ View the site at [http://localhost:7770](http://localhost:7770), or your local (
 
     grunt open
 
-To run it on another port, use the `port` flag eg, `grunt --port=3000`
+To run the site on another port, use the `port` flag eg, `grunt --port=3000`
 
 ## Author
 
