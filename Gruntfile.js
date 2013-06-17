@@ -90,6 +90,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['open', 'connect', 'watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
 
 };
