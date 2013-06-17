@@ -3,7 +3,8 @@ module.exports = function (grunt) {
   'use strict';
 
   var port = grunt.option('port') || 7770,
-    appBase = "app";
+    appBase = "app",
+    hostname = "0.0.0.0";
 
   // For livereload
   function addLivereloadMiddleware(connect, options) {
@@ -30,6 +31,7 @@ module.exports = function (grunt) {
     connect: {
       livereload: {
         options: {
+          hostname: hostname,
           port: port,
           base: appBase,
           middleware: addLivereloadMiddleware
@@ -85,7 +87,7 @@ module.exports = function (grunt) {
 
     open: {
       all: {
-        path: 'http://localhost:' + port
+        path: 'http://' + hostname + ':' + port
       }
     }
   });

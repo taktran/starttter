@@ -22,7 +22,7 @@ Start the server
 
     grunt
 
-View the site at [http://localhost:7770](http://localhost:7770) or run
+View the site at [http://localhost:7770](http://localhost:7770), or your local (internal) ip address (useful for testing on other devices). You can also run
 
     grunt open
 
