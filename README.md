@@ -22,9 +22,11 @@ Start the server
 
     grunt
 
-View the site at: [http://localhost:7770](http://localhost:7770)
+View the site at [http://localhost:7770](http://localhost:7770) or run
 
-To run it on another the `port` flag eg, `grunt --port=3000`
+    grunt open
+
+To run it on another port, use the `port` flag eg, `grunt --port=3000`
 
 ## Author
 
