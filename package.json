@@ -1,12 +1,15 @@
 {
   "name": "starttter",
   "version": "0.0.1",
-  "description": "Starttter",
+  "description": "A website boilerplate for starttting",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taktran/starttter.git"
+  },
   "author": "Tak Tran (contact@tutaktran.com)",
   "license": "BSD",
   "devDependencies": {
