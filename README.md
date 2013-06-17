@@ -11,6 +11,7 @@ A website boilerplate, with the following features
     * [Node](http://nodejs.org/)
     * [Sass](http://sass-lang.com/download.html)
     * [GruntJS](http://gruntjs.com/)
+    * [Bower](http://bower.io/)
 
 2. Install packages
 
