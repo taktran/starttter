@@ -69,7 +69,7 @@ module.exports = function (grunt) {
         tasks: ['jshint:gruntfile']
       },
       scripts: {
-        files: 'app/js/*.js',
+        files: ['app/js/*.js', 'app/vendor/**/*'],
         tasks: ['jshint'],
         options: {
           livereload: true
