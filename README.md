@@ -5,15 +5,15 @@ A website boilerplate, with the following features
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (from [H5BP initializer](http://www.initializr.com/))
 * [GruntJS](http://gruntjs.com/) - with [Sass](http://sass-lang.com/download.html), [Livereload](https://github.com/gruntjs/grunt-contrib-livereload), and [JSHint](http://www.jshint.com/about/) support
 
-## Prerequisites
+## Installation
 
-1. Install
+1. Prerequisites
     * [Node](http://nodejs.org/)
     * [Sass](http://sass-lang.com/download.html)
     * [GruntJS](http://gruntjs.com/)
     * [Bower](http://bower.io/)
 
-2. Install packages
+2. Install node packages
 
         npm install
 
