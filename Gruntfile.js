@@ -54,8 +54,21 @@ module.exports = function (grunt) {
       gruntfile: {
         src: ['Gruntfile.js']
       },
+      karmaConfig: {
+        src: ['karma.conf.js']
+      },
       js: {
-        src: ['app/js/*.js', 'test/**/*.js']
+        src: ['app/js/*.js']
+      },
+      test: {
+        src: ['test/unit/*.js']
+      }
+    },
+
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        background: true
       }
     },
 
@@ -74,6 +87,14 @@ module.exports = function (grunt) {
         options: {
           livereload: true
         }
+      },
+      karmaConfig: {
+        files: '<%= jshint.karmaConfig.src %>',
+        tasks: ['jshint:karmaConfig', 'karma:unit:run']
+      },
+      test: {
+        files: '<%= jshint.test.src %>',
+        tasks: ['jshint', 'karma:unit:run']
       },
       css: {
         files: 'app/sass/*.scss',
@@ -94,6 +115,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.registerTask('default', ['connect', 'karma', 'watch']);
 
 };

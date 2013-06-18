@@ -4,6 +4,7 @@ A website boilerplate, with the following features
 
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (from [H5BP initializer](http://www.initializr.com/))
 * [GruntJS](http://gruntjs.com/) - with [Sass](http://sass-lang.com/download.html), [Livereload](https://github.com/gruntjs/grunt-contrib-livereload), and [JSHint](http://www.jshint.com/about/) support
+* Testing - with [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github.io/jasmine/)
 
 ## Installation
 
@@ -28,6 +29,14 @@ View the site at [http://localhost:7770](http://localhost:7770), or your local (
     grunt open
 
 To run the site on another port, use the `port` flag eg, `grunt --port=3000`
+
+## Testing
+
+Uses [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github.io/jasmine/).
+
+Karma is run automatically when `grunt` is called. To run it manually
+
+    karma start
 
 ## Author
 
