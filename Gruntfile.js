@@ -4,12 +4,15 @@ module.exports = function (grunt) {
 
   var port = grunt.option('port') || 7770,
     appBase = "app",
-    hostname = "0.0.0.0";
+    hostname = "0.0.0.0",
+    liveReloadPort = grunt.option('lrp') || 35729;
 
   // For livereload
-  function addLivereloadMiddleware(connect, options) {
+  function addLiveReloadMiddleware(connect, options) {
     var path = require('path'),
-      lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
+      lrSnippet = require('connect-livereload')({
+        port: liveReloadPort
+      }),
       folderMount = function folderMount(connect, point) {
         return connect['static'](path.resolve(point));
       };
@@ -34,7 +37,7 @@ module.exports = function (grunt) {
           hostname: hostname,
           port: port,
           base: appBase,
-          middleware: addLivereloadMiddleware
+          middleware: addLiveReloadMiddleware
         }
       }
     },
@@ -85,7 +88,7 @@ module.exports = function (grunt) {
         files: ['app/js/*.js', 'app/vendor/**/*'],
         tasks: ['jshint'],
         options: {
-          livereload: true
+          livereload: liveReloadPort
         }
       },
       karmaConfig: {
@@ -103,7 +106,7 @@ module.exports = function (grunt) {
       html: {
         files: ['app/*.html', 'app/css/*.css'],
         options: {
-          livereload: true
+          livereload: liveReloadPort
         }
       }
     },
