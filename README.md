@@ -6,6 +6,8 @@ A website boilerplate, with the following features
 * [GruntJS](http://gruntjs.com/) - with [Sass](http://sass-lang.com/download.html), [Livereload](https://github.com/gruntjs/grunt-contrib-livereload), and [JSHint](http://www.jshint.com/about/) support
 * Testing - with [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github.io/jasmine/)
 
+Also see [generator-starttter](https://github.com/taktran/generator-starttter) for a yeoman generator.
+
 ## Installation
 
 1. Prerequisites
