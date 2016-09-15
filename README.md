@@ -4,7 +4,7 @@ A website boilerplate, with the following features
 
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (from [H5BP initializer](http://www.initializr.com/))
 * [GruntJS](http://gruntjs.com/) - with [Sass](http://sass-lang.com/download.html), [Livereload](https://github.com/gruntjs/grunt-contrib-livereload), and [JSHint](http://www.jshint.com/about/) support
-* Testing - with [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github.io/jasmine/)
+* Testing - with [karma](http://karma-runner.github.io/) and [jasmine](https://jasmine.github.io/)
 
 Also see [generator-starttter](https://github.com/taktran/generator-starttter) for a yeoman generator.
 
@@ -36,7 +36,7 @@ To run the site using a different livereload port (default is `35729`), use the 
 
 ## Testing
 
-Uses [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github.io/jasmine/).
+Uses [karma](http://karma-runner.github.io/) and [jasmine](https://jasmine.github.io/).
 
 Karma is run automatically when `grunt` is called. To run it manually
 
